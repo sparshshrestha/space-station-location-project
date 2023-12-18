@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<!-- MetaData -->
+		<title>ISS Location</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="static/css/main.css" />
+		<noscript><link rel="stylesheet" href="static/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+
+						<div class="content">
+							<div class="inner">
+								<h1>International Space Station Location</h1>
+								<p>The International Space Station is currently at this exact coordinates: <a href={{ link }} target="_blank">{{ lat }}, {{ lon }}.</a> <br />
+								The weather in that location is {{ temp }}C {{ desc }}.</p>
+							</div>
+						</div>
+						<nav>
+							<ul>
+								<li><a href="#intro">Location</a></li>
+								<li><a href="#work">Distance</a></li>
+								<!--<li><a href="#elements">Elements</a></li>-->
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Location -->
+							<article id="intro">
+								<h2 class="major">Location</h2>
+								<span class="image main"><img src={{ flag_img }} alt="flag" /></span>
+								<p>The intrernational space station is currently over <a href={{ link }} target="_blank">{{ country }}({{ c_code }})</a>.
+									<br>
+									The temperature over there is {{ temp }}C with {{ desc }}.
+									{% if country != 'ocean' %}
+									<br>
+									Some facts about this location:
+									<br>
+									1. Country: {{ country }}
+									<br>
+									2. Population: {{ result[0]['population'] }}
+									<br>
+									3. Capital: {{ result[0]['capital'][0] }}
+									<br>
+									{% elif country == 'ocean' %}
+									<br>
+									Some facts about the Ocean:
+									<br>
+									1. The ocean covers more than 70 percent of the earth’s surface. So most of the time ISS is over the Ocean.
+									<br>
+									2. There are 20 million tons of untouchable gold in the ocean. Which means there may be billions of dollars’ worth of treasure deep within the oceans.
+									<br>
+									3. The sun gives the ocean its blue tint.
+									<br>
+									{% endif %}
+								</p>
+							</article>
+
+						<!-- Diatance -->
+							<article id="work">
+								<h2 class="major">Distance from Sudbury</h2>
+								<span class="image main"><img src="static/images/distance.jpg" alt="" /></span>
+								<p>The distance of the <a href={{ link }} target="_blank">International Space Station</a> from <a href="https://www.google.com/maps/place/1264+Lansing+Ave,+Greater+Sudbury,+ON+P3A+4C3/@46.5247588,-80.9287964,16z/data=!4m5!3m4!1s0x4d2f00be6aaca345:0x314ff9538a9ef327!8m2!3d46.524752!4d-80.9287383" target="_blank">Sudbury (My Location)</a> is {{ distance }}KM.</p>
+							</article>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">&copy; BTA-1016 Assignment 7. Design: <a href="https://sparsh-shrestha-assignment-2.sparshshrestha.repl.co/ " target="_blank">Sparsh Shrestha</a>.</p>
+					</footer>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="static/js/jquery.min.js"></script>
+			<script src="static/js/browser.min.js"></script>
+			<script src="static/js/breakpoints.min.js"></script>
+			<script src="static/js/util.js"></script>
+			<script src="static/js/main.js"></script>
+
+	</body>
+</html>
